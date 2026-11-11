@@ -1,6 +1,3 @@
-MAX_NUMBERS_ORDERED = 20
-
-
 class Cart:
     """Giỏ hàng chứa tối đa MAX_NUMBERS_ORDERED đĩa DVD."""
 
@@ -8,7 +5,7 @@ class Cart:
         self.items = []
 
     def add_dvd(self, dvd):
-        if len(self.items) > MAX_NUMBERS_ORDERED:
+        if len(self.items) >= 20:
             print("The cart is almost full")
             return False
         self.items.append(dvd)
