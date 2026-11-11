@@ -30,3 +30,6 @@ class Cart:
             print(f"{i}. DVD - {dvd.title} - {dvd.category} - {dvd.director} - {dvd.cost} $")
         print(f"Total cost: {self.total_cost()} $")
         print("***************************************************")
+    def apply_discount(self, percent):
+        # Lỗi: chỉ trả về số tiền được giảm thay vì tổng tiền sau khi giảm
+        return self.total_cost() * percent / 100
