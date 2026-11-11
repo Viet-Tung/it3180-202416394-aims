@@ -31,5 +31,6 @@ class Cart:
         print(f"Total cost: {self.total_cost()} $")
         print("***************************************************")
     def apply_discount(self, percent):
-        # Lỗi: chỉ trả về số tiền được giảm thay vì tổng tiền sau khi giảm
-        return self.total_cost() * percent / 100
+        if percent < 0 or percent > 100:
+            raise ValueError("Invalid discount percent")
+        return self.total_cost() * (1 - percent / 100)
