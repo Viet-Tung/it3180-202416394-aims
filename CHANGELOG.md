@@ -19,3 +19,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 - Lỗi cho phép giỏ hàng nhận vượt quá 20 đĩa (`Bugfix/cart limit off-by-one`) (#7).
+
+## [1.1.0] - 2026-11-12
+
+### Added
+- Tính năng tìm kiếm theo mục (`search_by_category`)
+- Tính năng sắp xếp theo tiêu đề (`sort_by_title`)
+- Tính năng sắp xếp theo chi phí (`sort_by_cost`)
