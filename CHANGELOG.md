@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [1.0.0] - 2026-11-11
+## [1.0.0] - 2026-11-2
 
 ### Added
 - Phương thức hiển thị giỏ hàng `Cart.print_cart()` và tích hợp vào luồng chạy chính trong `main.py`.
@@ -20,9 +20,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - Lỗi cho phép giỏ hàng nhận vượt quá 20 đĩa (`Bugfix/cart limit off-by-one`) (#7).
 
-## [1.1.0] - 2026-11-12
+## [1.1.0] - 2026-11-3
 
 ### Added
 - Tính năng tìm kiếm theo mục (`search_by_category`)
 - Tính năng sắp xếp theo tiêu đề (`sort_by_title`)
 - Tính năng sắp xếp theo chi phí (`sort_by_cost`)
+
+## [1.0.1] - 2026-11-3
