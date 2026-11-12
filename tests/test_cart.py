@@ -31,6 +31,29 @@ class TestCart(unittest.TestCase):
         cart.add_dvd(DigitalVideoDisc("D1", "Cat", "Dir", cost=10.0))
         cart.add_dvd(DigitalVideoDisc("D2", "Cat", "Dir", cost=20.5))
         self.assertAlmostEqual(cart.total_cost(), 30.5)
-    
+
+    def test_sort_by_title(self):
+        cart = Cart()
+        cart.add_dvd(DigitalVideoDisc("D1", "Cat", "Dir", 10.0))
+        cart.add_dvd(DigitalVideoDisc("d4", "Cat", "Dir", 10.0))
+        cart.add_dvd(DigitalVideoDisc("D3", "Cat", "Dir", 10.0))
+        cart.add_dvd(DigitalVideoDisc("D2", "Cat", "Dir", 10.0))
+
+        cart.sort_by_title()
+        titles = [dvd.title for dvd in cart.items]
+        self.assertEqual(titles, ["D1", "D2", "D3", "d4"])
+
+    def test_sort_by_cost(self):
+        cart = Cart()
+        cart.add_dvd(DigitalVideoDisc("D1", "Cat", "Dir", cost=25.0))
+        cart.add_dvd(DigitalVideoDisc("D2", "Cat", "Dir", cost=10.5))
+        cart.add_dvd(DigitalVideoDisc("D3", "Cat", "Dir", cost=50.0))
+        cart.add_dvd(DigitalVideoDisc("D4", "Cat", "Dir", cost=15.0))
+
+        cart.sort_by_cost()
+        costs = [dvd.cost for dvd in cart.items]
+        self.assertEqual(costs, [10.5, 15.0, 25.0, 50.0])
+
+
 if __name__ == "__main__":
     unittest.main()

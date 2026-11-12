@@ -34,3 +34,10 @@ class Cart:
         if percent < 0 or percent > 100:
             raise ValueError("Invalid discount percent")
         return self.total_cost() * (1 - percent / 100)
+    def sort_by_title(self):
+        self.items.sort(key=lambda x: x.title.lower())
+        return self.items
+
+    def sort_by_cost(self):
+        self.items.sort(key=lambda x: x.cost)
+        return self.items
